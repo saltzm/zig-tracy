@@ -21,7 +21,7 @@ const c = @cImport({
     if (options.tracy_manual_lifetime) @cDefine("TRACY_MANUAL_LIFETIME", {});
     if (options.tracy_fibers) @cDefine("TRACY_FIBERS", {});
     if (options.tracy_no_crash_handler) @cDefine("TRACY_NO_CRASH_HANDLER", {});
-    if (options.tracy_timer_fallback) @cDefine("TRACY_TIMER_FALLBACK", {});
+    @cDefine("TRACY_TIMER_FALLBACK", {});
 
     @cInclude("tracy/TracyC.h");
 });
